@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-work-experience', // Cambiado de 'Epp-work-experience' a 'app-work-experience'
+  selector: 'app-work-experience', 
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './work-experience.component.html', // Ruta corregida para ser relativa
-  styleUrls: ['./work-experience.component.css'] // Corregido de 'styleUrl' a 'styleUrls'
+  templateUrl: './work-experience.component.html', 
+  styleUrls: ['./work-experience.component.css'] 
 })
 export class WorkExperienceComponent {
   workExperience: Array<any> = [];
@@ -23,7 +23,7 @@ export class WorkExperienceComponent {
       ]
     };
     let work2 = {
-      fecha: "2014-2018", // Corregido de "2108" a "2018"
+      fecha: "2014-2018", 
       ubicacion: "Orizaba, Ver.",
       puesto: "CEO",
       empresa: "Kubeet",
