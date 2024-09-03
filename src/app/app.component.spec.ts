@@ -2,28 +2,30 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],  
+      declarations: [AppComponent],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();  // Detecta los cambios para asegurarse de que el template se actualice
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have the title 'Hello, mycv'`, () => {  
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Hello, mycv');
+  it(`should have the title 'Hello, mycv'`, () => {
+    expect(component.title).toEqual('Hello, mycv');
   });
 
-  it('should render title', () => {  
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
+  it('should render title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
+    console.log('Rendered title:', compiled.querySelector('h1')?.textContent); // Log para verificar el contenido
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, mycv');
   });
 });
