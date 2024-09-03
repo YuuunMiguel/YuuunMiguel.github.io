@@ -12,5 +12,5 @@ import { EducationComponent } from './education/education.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mycv';
+  title = 'Hello, mycv';
 }
